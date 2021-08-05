@@ -1,0 +1,70 @@
+<!DocumentType HTML>
+<html>
+<head>
+    <title>
+        Javascipt Events
+    </title>
+    <style>
+        #formouseout {
+            width: 40;
+            height: 50;
+            border: solid;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        Javascipt Events
+    </h2>
+
+    <p id="holder1"></p>
+    <p id="holder2"></p>
+    <p id="holder3"></p>
+
+    <p>1. Type something and press enter to trigger onChange event</p>
+    <input type="text" id="foronchangeevent" onchange=onChange()>
+    </input>
+
+    <p id="foronmouseover" onmouseover=onMouseOver()>
+        2. Bring mouse over this text to trigger the onMouseOver event
+    </p>
+
+    <p id="holder"></p>
+    <button onclick="document.getElementById('holder').innerHTML=Date()">
+        3. Triggering onclick event. --> The current date is?
+    </button>
+
+    <br>
+
+    <p>4. Bring the mouse in and then move it out of this box to trigger mouseout event</p>
+    <div onmouseout="onMouseOut()" id="formouseout"></div>
+
+    <p>5. Type something to trigger onkeydown event</p>
+    <input type="text" id="foronkeydown" onkeydown="OnKeyDown()">
+
+    <p>6. Event will be triggered when below div is loaded</p>
+    <p id="loader"></p>
+
+    <script>
+            function onChange(){
+                alert('IMPLEMENTED ONCHANGE EVENT');
+            }
+            function onMouseOver(){
+                alert('IMPLEMENTED ONMOUSEOVER');
+            }
+            function onMouseOut(){
+                alert('IMPLEMENTED ONMOUSEOUT');
+            }
+            function OnKeyDown(){
+                alert('Key is pressed');
+            }
+
+            document.getElementById("formouseout").onload=OnLoad();
+            function OnLoad(){
+               document.getElementById("loader").innerHTML="Hi , It is an onloading event.";
+            }
+
+    </script>
+</body>
+</html>

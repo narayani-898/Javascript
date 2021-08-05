@@ -1,0 +1,57 @@
+<!DocumentType HTML>
+<html>
+<body>
+    <h2>
+        Javascipt Functions
+    </h2>
+
+    <p id="demo"></p>
+    <p id="celcius"></p>
+
+    <script>
+
+            function showCube(a)
+            {
+                var cube=a*a*a;
+                window.alert("Cube of "+a+" is "+cube);
+            }
+            function showSquare(a)
+            {
+                var square=a*a;
+                window.alert("Square of "+a+" is "+square);
+            }
+            function showAdd(a)
+            {
+                var sum=a+a;
+                window.alert("Sum of "+a+" is "+sum);
+            }
+            function showSub(a)
+            {
+                var sub=a-a;
+                window.alert("Subtraction of "+a+" is "+sub);
+            }
+
+            //function return
+            let demon=myaddition(4,3);//function is called
+            document.getElementById("demo").innerHTML=" STORING FUNCTION RESULT INTO A VARIABLE<BR> RESULT : "+demon;
+
+            function myaddition(number1,number2){
+                return number1+number2;
+            }
+
+            function temperatureToCelsius(fahrenheit){
+                return(5/9)*(fahrenheit-32);
+            }
+
+            document.getElementById("celcius").innerHTML="INLINE FUNCTION CALLING<BR>Converted 77 F to Celsius : "+temperatureToCelsius(123) +" Celsius<br>";
+    </script>
+
+    <form>
+        <input type="button" value="Cube" onclick="showCube(7)" />
+        <input type="button" value="Square" onclick="showSquare(7)" />
+        <input type="button" value="Add" onclick="showAdd(7)" />
+        <input type="button" value="Subtract" onclick="showSub(7)" />
+    </form>
+
+</body>
+</html>

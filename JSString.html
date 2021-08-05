@@ -1,0 +1,45 @@
+<!DocumentType HTML>
+<html>
+<head>
+    <title>
+        Javascipt Events
+    </title>
+</head>
+<body>
+    <h2>
+        Javascipt Events
+    </h2>
+
+    <p id="holder">CONVERT this to lowercar</p>
+    <p id="holder1">Convert this to upper case</p>
+    <p id="holder2"></p>
+    <p id="holder3"></p>
+
+    <button onclick="TOUPPER()">To Upper</button>
+    <button onclick="TOLOWER()">To Lower</button>
+
+    <script>
+            let name="Narayani";
+            document.write("Lenth of Narayani is : "+name.length+"<br>");
+            document.write("Slicing Narayani from 2 to 4 (4 is exclusive): "+name.slice(2,4)+"<br>");
+            document.write("Slicing Narayani from right end : "+name.slice(-2)+"<br>");
+            document.write("Substring substr : "+name.substr(2,3)+"<br>");
+            document.write("Substring substring : "+name.substring(2,4)+"<br>");
+            document.write("Converting narayani to NARAYANI : "+name.toUpperCase()+"<br>");
+            document.write("Converting NARAYANI to narayani : "+name.toLowerCase()+"<br>");
+
+            function TOUPPER(){
+                let text=document.getElementById("holder").innerHTML;
+                 document.getElementById("holder").innerHTML=text.toUpperCase;
+            }
+
+            function TOLOWER(){
+                let text=document.getElementById("holder1").innerHTML;
+                document.getElementById("holder1").innerHTML=text.toLowerCase;
+
+            }
+    </script>
+
+
+</body>
+</html>

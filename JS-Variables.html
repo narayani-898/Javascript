@@ -1,0 +1,31 @@
+<!DocumentType HTML>
+<html>
+    <body>
+        <h2>
+            Javascipt Variables
+        </h2>
+
+        <p id="demo"></p>
+        <p id="bill"></p>
+        <p id="intro"></p>
+        <p id="teach"></p>
+
+        <script>
+            var value=100;
+            var _value2=200;
+            document.getElementById("demo").innerHTML="Implementing var and _ <br> Result: "+value +", "+_value2;
+       
+            var price_jeans=500;
+            var price_Shirt=450;
+            var bill=price_jeans+price_Shirt;
+            document.getElementById("bill").innerHTML="Adding variables to calculate bill "+bill +"<br>";
+       
+            var trainee="Narayani", Skills="JS";
+            document.getElementById("intro").innerHTML="Name : "+trainee+"<br> Skills : "+Skills+"<br>";
+
+            $name="Jay", $class="12th", $subject="Maths";
+            document.getElementById("teach").innerHTML="Using $ : <br>"+$name+" teaches "+$subject+" to "+$class+" class students";
+    
+       </script>
+    </body>
+</html>

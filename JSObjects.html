@@ -1,0 +1,43 @@
+<!DocumentType HTML>
+<html>
+<head>
+    <title>
+        Javascipt Objects
+    </title>
+</head>
+<body>
+    <h2>
+        Javascipt Objects
+    </h2>
+
+    <p id="objects"></p>
+    <p id="object"></p>
+    <p id="object1"></p>
+    <p id="person"></p>
+
+
+    <script>
+         let cart="Range Rover";
+        document.getElementById("objects").innerHTML="CAR : "+cart+"<br>";
+
+        //create object
+        const car={name:"BMW",type:"Manual",model:"2021"};
+        document.getElementById("object").innerHTML="CAR Name: "+car.name+"<br>"+"CAR Type: "+car.type+"<br>"+"CAR Model: "+car.model+"<br>";
+
+        document.getElementById("object1").innerHTML="CAR Name: "+car["name"];
+
+       const person={
+           firstname:"Narayani",
+           lastname:"Gadhave",
+           fullname:function(){
+               return this.firstname+" "+this.lastname;
+           }
+       }
+       document.getElementById("person").innerHTML="FirstName: "+person["firstname"]+"<br>LastName: "+person["lastname"]+"<br>FullName: "+person.fullname();
+
+
+
+    </script>
+
+</body>
+</html>

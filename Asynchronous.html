@@ -1,0 +1,32 @@
+<!DocType HTML>
+<html>
+
+<head>
+    <title>
+        Javascipt Asynchronous Callback Mechenism
+    </title>
+</head>
+
+<body>
+    <p>Functions running in parallel with each other</p>
+    <p id="holder"></p>
+    <p id="holder1"></p>
+    <p id="holder2"></p>
+
+</body>
+
+<script>
+
+    setTimeout(serverdisplay, 3000);
+    function serverdisplay() {
+        document.getElementById("holder").innerHTML = "After 3000ms - Hello you are at the Server !";
+  }
+
+  setTimeout(function(){servercall("Hello , this is message from the server after 5000ms");}, 5000);
+    function servercall(param) {
+        document.getElementById("holder1").innerHTML = param;
+  }
+
+</script>
+
+</html>

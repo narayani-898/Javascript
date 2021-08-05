@@ -1,0 +1,59 @@
+<!DocType HTML>
+<html>
+
+<head>
+    <title>
+        Javascipt Callback Function
+    </title>
+
+
+
+    <body>
+
+        <p id="holder1"></p>
+        <p id="holder2"></p>
+        <p id="holder3"></p>
+        <p id="holder4"></p>
+
+    </body>
+
+    <script>
+
+    function add(params){
+        document.getElementById("holder1").innerHTML=params;
+    }
+
+    function addRECEIVE(params){
+        document.getElementById("holder2").innerHTML=params;
+    }
+
+    function sendAddition(){
+        add("From sendAddition");
+    }
+    function receiveAddition(){
+        addRECEIVE("FromReceiveAddition");
+    }
+
+    sendAddition();
+    receiveAddition();
+
+    //different approach
+
+    function calculator(num1,num2){
+        let sum=num1+num2;
+        return sum;
+    }
+
+    function result(param){
+        document.getElementById("holder3").innerHTML="Result returned by the calculator is : "+param;
+    }
+
+    let total=calculator(9,1);
+    result(total);
+
+    </script>
+
+
+</head>
+
+</html>

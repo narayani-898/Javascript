@@ -1,0 +1,49 @@
+<!DocumentType HTML>
+<html>
+
+<head>
+    <title>
+        Javascipt Events
+    </title>
+</head>
+
+<body>
+    <h2>
+        Javascipt Events
+    </h2>
+
+    <p>Example to find the element by html tag name</p>
+    <p>Javascript is cool. </p>
+    <h1>
+        Enjoy
+    </h1>
+    <p id="holder"></p>
+
+    <div id="nestedDom">
+        <p>Finding HTML by Tag Name</p>
+        <p><strong>Implementing nested DOM</strong></p>
+    </div>
+
+    <p id="holder2"></p>
+    <p id="holder3"></p>
+
+
+    <script>
+            const elementh2 = document.getElementsByTagName("h1");
+            const element = document.getElementsByTagName("p");
+            document.getElementById("holder").innerHTML = "OUTPUT WITH DOM <BR> : The information about the training will be shared shortly.<BR>First line is : " + element[0].innerHTML
+                + "<BR>Second Line is : " + element[1].innerHTML +
+                "<BR>Heading part : " + elementh2[0].innerHTML;
+
+            const a = document.getElementById("nestedDom");
+            const y = a.getElementsByTagName("p");
+
+            document.getElementById("holder2").innerHTML =
+                "The first paragraph inside nestedDOM is ::::: " +
+                y[0].innerHTML;
+
+
+
+
+
+    </script>
